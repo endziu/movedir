@@ -5,6 +5,9 @@ const Task = require('data.task')
 const args = parse(process.argv.slice(2))
 const [ srcDir, dstDir ] = args._
 
+const error = (e) => console.error(e)
+const success = (x) => console.log('Success!')
+
 const help = () => console.log
 (`
   will delete everything from destination folder
@@ -35,12 +38,7 @@ const copyDir = (src, dst) =>
     fs.copy(src, dst, (err,success) => err ? rej(err) : res(success)))
 
 
-const doStuff = () =>
-  emptyDir(dstDir)
-    .chain(() => copyDir(srcDir, dstDir))
+const doStuff = () => emptyDir(dstDir)
+                      .chain(() => copyDir(srcDir, dstDir))
 
-doStuff()
-  .fork(
-    e => console.log(e),
-    x => console.log('nailed it!')
-  )
+doStuff().fork(error, success)
