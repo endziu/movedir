@@ -5,9 +5,6 @@ const Task = require('data.task')
 const args = parse(process.argv.slice(2))
 const [ srcDir, dstDir ] = args._
 
-const error = (e) => console.error(e)
-const success = (x) => console.log('Success!')
-
 const help = () => console.log
 (`
   will delete everything from destination folder
@@ -28,6 +25,9 @@ if (!srcDir || !dstDir) {
   help()
   process.exit(1)
 }
+
+const error = (e) => console.error(e)
+const success = (x) => console.log('Success!')
 
 const emptyDir = (path) => 
   new Task((rej, res) =>
