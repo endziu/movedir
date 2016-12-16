@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs-extra')
 const parse = require('minimist')
 const Task = require('data.task')
