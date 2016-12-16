@@ -18,7 +18,7 @@ const help = () => console.log
   $ node moveBuild /path/to/src /path/to/dest
 `)
 
-if(args.h || args.help) {
+if (args.h || args.help) {
   help()
   process.exit(0)
 }
@@ -39,8 +39,6 @@ const copyDir = (src, dst) =>
   new Task ((rej, res) =>
     fs.copy(src, dst, (err,success) => err ? rej(err) : res(success)))
 
-
-const doStuff = () => emptyDir(dstDir)
-                      .chain(() => copyDir(srcDir, dstDir))
-
-doStuff().fork(error, success)
+emptyDir(dstDir)
+  .chain(() => copyDir(srcDir, dstDir))
+  .fork(error, success)
