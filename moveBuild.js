@@ -7,7 +7,7 @@ const Task = require('data.task')
 const args = parse(process.argv.slice(2))
 const [ srcDir, dstDir ] = args._
 
-const help = () => console.log
+const info = () => console.log
 (`
   will delete everything from destination folder
   and fill it with stuff from source folder.
@@ -18,13 +18,8 @@ const help = () => console.log
   $ node moveBuild /path/to/src /path/to/dest
 `)
 
-if (args.h || args.help) {
-  help()
-  process.exit(0)
-}
-
 if (!srcDir || !dstDir) {
-  help()
+  info()
   process.exit(1)
 }
 
