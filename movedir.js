@@ -23,9 +23,6 @@ if (!srcDir || !dstDir) {
   process.exit(0)
 }
 
-const error = (e) => console.error(e)
-const success = (x) => console.log('Success!')
-
 const emptyDir = (path) => 
   new Task((rej, res) =>
     fs.emptyDir(path, (err,success) => err ? rej(err) : res(success)))
@@ -33,6 +30,9 @@ const emptyDir = (path) =>
 const copyDir = (src, dst) =>
   new Task ((rej, res) =>
     fs.copy(src, dst, (err,success) => err ? rej(err) : res(success)))
+
+const error = (e) => console.error(e)
+const success = (x) => console.log('Success!')
 
 emptyDir(dstDir)
   .chain(() => copyDir(srcDir, dstDir))
