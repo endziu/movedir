@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node movedir.js"
   },
+  "bin": {
+    "moveDir": "./movedir.js"
+  },
   "keywords": [],
   "author": "endziu",
   "license": "ISC",
