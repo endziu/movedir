@@ -20,7 +20,7 @@ const info = () => console.log
 
 if (!srcDir || !dstDir) {
   info()
-  process.exit(1)
+  process.exit(0)
 }
 
 const error = (e) => console.error(e)

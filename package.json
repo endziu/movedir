@@ -4,8 +4,7 @@
   "description": "will delete stuff from dst/ and fill it with stuff from src/",
   "main": "movedir.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node moveBuild"
+    "start": "node movedir.js"
   },
   "keywords": [],
   "author": "endziu",
