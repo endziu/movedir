@@ -1,15 +1,15 @@
 {
-  "name": "moveBuild",
+  "name": "move-dir",
   "version": "1.0.0",
   "description": "will delete stuff from dst/ and fill it with stuff from src/",
-  "main": "moveBuild.js",
+  "main": "movedir.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node moveBuild ../mapa/build ../mapa-deploy/build"
+    "start": "node moveBuild"
   },
   "keywords": [],
   "author": "endziu",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "data.task": "^3.1.1",
     "fs-extra": "^1.0.0",

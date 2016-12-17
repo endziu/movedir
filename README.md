@@ -1,4 +1,4 @@
-## moveBuild
+## movedir
 
 
-$ node moveBuild /src/path /dst/path
+$ node movedir /src/path /dst/path

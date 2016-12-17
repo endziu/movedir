@@ -15,7 +15,7 @@ const info = () => console.log
 -----
 
   Use like this:
-  $ node moveBuild /path/to/src /path/to/dest
+  $ node movedir /path/to/src /path/to/dest
 `)
 
 if (!srcDir || !dstDir) {
