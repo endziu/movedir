@@ -1,13 +1,13 @@
 {
-  "name": "move-dir",
+  "name": "replace-build",
   "version": "1.0.0",
   "description": "will delete stuff from dst/ and fill it with stuff from src/",
-  "main": "movedir.js",
+  "main": "replace-build.js",
   "scripts": {
-    "start": "node movedir.js"
+    "start": "node replace-build.js"
   },
   "bin": {
-    "moveDir": "./movedir.js"
+    "moveDir": "./replace-build.js"
   },
   "keywords": [],
   "author": "endziu",
